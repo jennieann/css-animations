@@ -1,0 +1,28 @@
+button {
+  height: 90px;
+  width: 290px;
+  font-size: 28px;
+  color: #0f0c77;
+  border: none;
+  background-color: #ff5733;
+
+  /* shorthand */
+  transition: background-color 0.5s linear 0.5s, color 2s ease 1s,
+    width 0.5s ease-in-out 0.5s, border-radius 3s ease-out 3s;
+
+  /* transition: all 0.5s linear 0.5s; */
+
+  /*properties no shorthand*/
+  /* transistion-property: color background-color width;
+  transition-duration: 1s;
+  transition-timing-fuction: ease-in-out;
+  transition-delay: 2s;*/
+}
+
+button:hover {
+  background-color: #f98870;
+  color: #fff;
+  width: 300px;
+  border-radius: 50%;
+  //transform: translate(20px, 0);
+}
