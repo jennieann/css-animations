@@ -1,19 +1,69 @@
-.colorful {
+.colorfulTop,
+.colorfulRight,
+.colorfulBottom,
+.colorfulLeft,
+.colorfulTopRight,
+.colorfulProcent,
+.colorfulPixels {
   width: 200px;
   height: 75px;
   background-color: #ff5733;
   color: white;
   font-family: verdana;
   margin: auto;
-  margin-top: 200px;
+  margin-top: 50px;
   padding-top: 20px;
   text-align: center;
-  transition: transform 2s ease-in;
+  transition: transform 0.5s ease-in;
 }
 
-.colorful:hover {
-  transform: translate(500px, 200px);
+.colorfulTop {
+  transform-origin: top;
+}
+
+.colorfulRight {
+  transform-origin: right;
+}
+
+.colorfulBottom {
+  transform-origin: bottom;
+}
+
+.colorfulLeft {
+  transform-origin: left;
+}
+
+.colorfulTopRight {
+  transform-origin: top right;
+}
+
+.colorfulProcent {
+  transform-origin: 30%, 50%;
+}
+.colorfulPixels {
+  transform-origin: 200px, 50px;
+}
+
+.colorfulTop:hover {
+  /*transform: translate(500px, 200px);*(
   /*negative values make the oposite move* translate(x,y)/
   /*translate x moves horizontally right if the value if possitive, horzontally left if negative*/
   /*translate y moves vertically bottom if the value if possitive, top if negative*/
+
+  /*transform: scale(1.5); //scaleX(), scaleY()*/
+
+  transform: rotate(45deg); /* minus deg will rotate counter clockwise*/
+  /*transform: rotate(1turn);*/
+
+  /*transform: skewX(50deg);*/
+}
+
+.colorfulTop:hover,
+.colorfulRight:hover,
+.colorfulBottom:hover,
+.colorfulLeft:hover,
+.colorfulTopRight:hover,
+.colorfulProcent:hover,
+.colorfulPixels:hover {
+  transform: rotate(45deg);
 }
