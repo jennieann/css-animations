@@ -1,0 +1,86 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+
+button {
+  position: relative;
+  width: 400px;
+  height: 120px;
+  color: red;
+  text-decoration: none;
+  text-align: center;
+  vertical-align: center;
+  font-family: verdana;
+  font-size: 32px;
+  border:none;
+  overflow: hidden;
+  cursor: default;
+  margin-bottom: 40px;
+  background-color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 20px;
+}
+
+button::before{
+  content: '';
+  position: absolute;
+  top:0px;
+  left: -100%;
+  width: 100%;
+  height: 4px;
+  background-color:red; 
+  transition: all 0.2s;
+}
+
+button:hover::before{
+  left:0
+}
+
+button::after{
+  content: '';
+  position: absolute;
+  bottom:0px;
+  right: -100%;
+  width: 100%;
+  height: 4px;
+  background-color:red; 
+  transition: all 0.2s;
+}
+
+button:hover::after{
+  right:0
+}
+
+button span::before{
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background-color:red; 
+  transition: all 0.2s;
+}
+
+button:hover span::before{
+  top:0;
+}
+
+button span::after{
+  content: '';
+  position: absolute;
+  top: -100%;
+  right: 0;
+  width: 4px;
+  height: 100%;
+  background-color:red; 
+  transition: all 0.2s;
+}
+
+button:hover span::after{
+  top:0;
+}

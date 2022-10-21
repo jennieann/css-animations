@@ -1,0 +1,58 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #272727;
+  
+}
+
+a {
+  border: 2px solid #00aeff;
+  text-decoration: none;
+  font-size: 24px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color:#00aeff;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  padding: 15px 30px;
+  position: relative;
+  transition: all 0.5s;
+  overflow: hidden;
+}
+
+a:hover{
+  color: #ffffff;
+}
+
+.wave{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: calc(100% + 22px);
+  background-color:#00aeff;
+  transition: all 1s;
+  z-index: -1;
+}
+
+
+a:hover .wave{
+  top:0;
+}
+
+.wave:after{
+  content:'';
+  position: absolute;
+  top:-22px;
+  left:0;
+  height: 22px;
+  width: 100%;
+  background: url(wave.png);
+  animation: wavy 0.5s linear infinite;
+}
+
+@keyframes wavy {
+  0% {background-position-x: 0}
+  100%{background-position-x: 118px}
+}
+

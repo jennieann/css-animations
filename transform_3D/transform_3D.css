@@ -1,0 +1,20 @@
+body {
+  perspective: 500px;
+}
+.button {
+  width: 300px;
+  height: 75px;
+  background-color: #ff5733;
+  color: white;
+  font-family: verdana;
+  margin: auto;
+  margin-top: 25%;
+  padding-top: 20px;
+  text-align: center;
+  transition: transform 0.5s ease-in;
+}
+
+.button:hover {
+  /*transform: translateZ(100px);*/
+  transform: rotateZ(90deg);
+}

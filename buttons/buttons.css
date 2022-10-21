@@ -1,0 +1,321 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  position: relative;
+  width: 400px;
+  color: #8079fe;
+  text-decoration: none;
+  text-align: center;
+  font-family: verdana;
+  font-size: 32px;
+  border: 5px solid #5617ff;
+  overflow: hidden;
+  cursor: default;
+  margin-bottom: 40px;
+}
+
+.button:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #d0cbf9;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+.swipeButton:hover,
+.crossEffect:hover,
+.rotatingButton:hover {
+  color: #5617ff;
+}
+
+.rotatingButton:before {
+  transform-origin: top left;
+  transform: rotate(-90deg);
+  transition: all 0.5s;
+}
+
+.rotatingButton:hover:before {
+  transform: rotate(0deg);
+}
+
+.swipeButton {
+  transition: all 1s;
+}
+
+.swipeButton:before {
+  /* transform: translateY(-100%); top to bottom*/
+  transform: translateX(-100%); /* left to right */
+  transition: all 1s;
+}
+
+.swipeButton:hover:before {
+  transform: translateX(0%);
+}
+.crossEffect:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #d0cbf9;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+.crossEffect:after {
+  transition: all 1s;
+  transform: rotateY(90deg);
+}
+
+.crossEffect:hover:after {
+  transform: rotateY(0deg);
+}
+
+.crossEffect:before {
+  transition: all 1s;
+  transform: rotateX(90deg);
+}
+
+.crossEffect:hover:before {
+  transform: rotateX(0deg);
+}
+
+.scaleButton {
+  transition: all 0.5s;
+  letter-spacing: 2px;
+  background-color: white;
+}
+.scaleButton:hover {
+  border: 7px solid #5617ff;
+  font-weight: 900;
+  letter-spacing: 4px;
+}
+
+.yeahButton:before {
+  content: 'Yeah!';
+  display: flex;
+  justify-content: center;
+  background-color: #5617ff;
+  color: white;
+  align-items: center;
+  transform: translateY(-100%);
+  transition: all 0.2s;
+  z-index: 2;
+}
+
+.yeahButton {
+  transition: all 0.3s;
+  background-color: white;
+}
+
+.button.yeahButton:hover:before {
+  transform: translateY(0);
+}
+
+.button.barSliderButton:hover {
+  color: white;
+  background-color: #5617ff;
+}
+
+.barSliderButton {
+  transition: all 0.3s;
+}
+
+.button.barSliderButton:before {
+  content: '';
+  background-color: white;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  transition: all 0.3s;
+  transform: translateX(-100%) rotate(45deg);
+  z-index: 1;
+}
+
+.button.barSliderButton:hover:before {
+  transition: all 1s;
+  transform: translateX(100%) rotate(45deg);
+}
+
+.twoLayerButton {
+  background-color: white;
+  border: none;
+  border-radius: 8px;
+  color: transparent;
+}
+
+.button.twoLayerButton:before {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  content: 'Watch this';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #fffa65;
+  color: #666666;
+  z-index: 1;
+  border-radius: 8px;
+  transition: all 0.5s;
+}
+
+.button.twoLayerButton:after {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  content: 'Watch this';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #fffa65;
+  color: #666666;
+  z-index: 1;
+  border-radius: 8px;
+  transition: all 0.5s;
+  transform: translate(-100%, 100%);
+}
+
+.button.twoLayerButton:hover:before {
+  transform: translate(100%, -100%);
+}
+
+.button.twoLayerButton:hover:after {
+  transform: translate(0%, 0%);
+}
+
+.button.textScalingbutton {
+  background-color: white;
+  transition: all, 0.5s;
+}
+
+.button.textScalingbutton:before {
+  content: 'Text Scaling Button';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  color: #5617ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(5);
+  opacity: 0;
+  z-index: 1;
+  transition: all, 0.5s;
+}
+
+.button.textScalingbutton:hover:before {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.button.circularSwappingButton:after {
+  content: '';
+  position: absolute;
+  color: white;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background: #5617ff;
+  z-index: -1;
+  border-radius: 50% 50% 0 0;
+  transition: all 0.5s;
+}
+
+.button.circularSwappingButton {
+  transition: all 0.5s;
+}
+
+.button.circularSwappingButton:hover {
+  color: white;
+}
+.button.circularSwappingButton:hover:after {
+  height: 190%;
+}
+
+.ThreeLayer{
+  position:relative;
+  padding: 30px 0;
+  background-color: #d0cbf9;
+  width: 400px;
+  text-decoration: none;
+  text-align: center;
+  font-family: verdana;
+  font-size: 32px;
+  color: #5617ff;
+}
+
+.ThreeLayer:before{
+  content: '3 Layer rotating button';
+  position:absolute;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  background: pink;
+  transform: rotateX(270deg);
+  transform-origin: top;
+  transition: all 0.5s; 
+
+}  
+
+.ThreeLayer:after{
+  content: '3 Layer rotating button';
+  position:absolute;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  background: blue;
+  transform: rotateX(270deg);
+  transform-origin: top;
+  transition: all 0.5s; 
+  transition-delay: 0.2s;
+  color: white;
+} 
+
+
+.ThreeLayer:hover:after,.ThreeLayer:hover:before {
+  transform: rotateX(0deg);
+}
+
+.flipping span{
+  color: transparent;
+  position: relative;
+}
+.flipping span::after{
+  content: 'F';
+  top:0;
+  left: 0;
+  color: #5617ff;
+  position: absolute;
+  transition: all 0.2s;
+}
+
+.flipping:hover span:after{
+  font-size: 40px;
+  transform: translate(-50%, -20%) rotate(360deg);
+  font-size: 60px;
+}

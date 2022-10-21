@@ -45,12 +45,12 @@
 }
 
 .colorfulTop:hover {
-  /*transform: translate(500px, 200px);*(
+  transform: translate(500px, 200px);
   /*negative values make the oposite move* translate(x,y)/
   /*translate x moves horizontally right if the value if possitive, horzontally left if negative*/
   /*translate y moves vertically bottom if the value if possitive, top if negative*/
 
-  /*transform: scale(1.5); //scaleX(), scaleY()*/
+  transform: scale(1.5); //scaleX(), scaleY()*/
 
   transform: rotate(45deg); /* minus deg will rotate counter clockwise*/
   /*transform: rotate(1turn);*/
@@ -66,4 +66,6 @@
 .colorfulProcent:hover,
 .colorfulPixels:hover {
   transform: rotate(45deg);
+  /* transform: scale(1.5);
+  transform: translate(500px, 200px); */
 }
