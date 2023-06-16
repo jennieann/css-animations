@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+    <script type="text/javascript">
+      const buttonText = () => {
+        const element = document.getElementById('rain__button');
+        const buttonElement = document.getElementById('rain__button');
+
+        if (element.innerHTML === 'Regn') {
+          element.innerHTML = 'Sluta regna';
+          buttonElement.classList.add('rain__button--yellow');
+          buttonElement.classList.remove('rain__button--blue');
+        } else {
+          element.innerHTML = 'Regn';
+          buttonElement.classList.add('rain__button--blue');
+          buttonElement.classList.remove('rain__button--yellow');
+        }
+      };
+      const toggleDarken = () => {
+        const element = document.getElementById('darken-image');
+
+        element.classList.toggle('darken-image');
+      };
+      const rainToggle = () => {
+        const element = document.getElementById('rain');
+
+        const bodyelement = document.querySelector('body');
+
+        bodyelement.classList.toggle('not-raining');
+
+        element.classList.toggle('stop-raining');
+      };
+    </script>
+  </head>
+  <body>
+    <div id="rain" class="rain">
+      <div class="x">
+        <button
+          id="rain__button"
+          class="rain__button y"
+          onClick="rainToggle(), buttonText(), toggleDarken()"
+        >
+          Sluta regna
+        </button>
+      </div>
+    </div>
+    <div class="darken-image" id="darken-image"></div>
+  </body>
+</html>
